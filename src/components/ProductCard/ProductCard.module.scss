@@ -1,0 +1,22 @@
+.card {
+  padding: 10px;
+  border: 2px solid black;
+  flex-basis: 300px;
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  p {
+    font-weight: bold;
+  }
+}
+
+.image {
+  margin-bottom: 14px;
+  max-width: 300px;
+  img {
+    width: 100%;
+  }
+}

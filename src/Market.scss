@@ -1,0 +1,21 @@
+.market {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.cards-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  max-width: 940px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}

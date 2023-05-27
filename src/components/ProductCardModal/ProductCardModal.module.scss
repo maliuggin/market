@@ -1,0 +1,39 @@
+.body {
+  position: relative;
+  max-width: 800px;
+  display: flex;
+  gap: 10px;
+}
+
+.text {
+  font-size: 18px;
+  flex-grow: 1;
+  h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  p {
+    margin-bottom: 14px;
+  }
+}
+
+.image {
+  flex-basis: 400px;
+  img {
+    width: 100%;
+  }
+}
+
+.btnClose {
+  border: none;
+  background-color: black;
+  color: white;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-radius: 50%;
+}
