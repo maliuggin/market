@@ -79,9 +79,13 @@ const Market = () => {
   const [productsCopy, setProductsCopy] = useState(products);
 
 
+  function filterProducts(selectedSizes) {
+    setProducts(products => selectedSizes.length ? products.filter(prod => prod.availableSizes.some(item => selectedSizes.includes(item))) : productsCopy)
+  }
+
   return ( <div className='market'>
     <h1 className='title'>Магазин товаров</h1>
-    <FilterSize productsCopy={productsCopy} setProducts={setProducts}/>
+    <FilterSize filter={filterProducts} />
     <div className='cards-list'>
       {products.map((product, index) => <ProductCard
        onClick={() => setModalIsShow({isShow: true, index: index})}

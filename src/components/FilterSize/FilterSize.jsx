@@ -1,17 +1,18 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import styles from "./FilterSize.module.scss"
 
 //  s m l xl
 const sizes =["s", "m", "l", "xl"]
 
-const FilterSize = ({productsCopy, setProducts}) => {
+const FilterSize = ({filter}) => {
   const [selectedSizes, setSelectedSizes] = useState([])
 
   const filterProducts = size => {
     setSelectedSizes(sz => sz.includes(size) ? sz.filter(sz => sz !== size) : [...sz, size])
-    setProducts(products => selectedSizes.length ? products.filter(prod => prod.availableSizes.some(item => selectedSizes.includes(item))) : products)
   }
+
+  useEffect(() => filter(selectedSizes), [selectedSizes])
 
 
   return ( <div className={styles.box}>
