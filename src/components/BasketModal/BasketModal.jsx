@@ -2,9 +2,10 @@ import React from 'react';
 import styles from "./BasketModal.module.scss"
 import BasketModalProductCard from '../BasketModalProductCard/BasketModalProductCard';
 import Button from '../ui/button/Button';
-
-const BasketModal = (props) => {
-  return ( <div className={styles.menu}>
+import "./scroll.scss"
+const BasketModal = ({isShow,...props}) => {
+  console.log(isShow)
+  return ( <div className={`${styles.menu} ${isShow ? styles.scroll : ""}`} >
     <h1 className={styles.title}>Корзина товаров</h1>
     {props.prodInBasket.length ? 
     <>

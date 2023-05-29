@@ -6,6 +6,7 @@ import ProductCardModal from './components/ProductCardModal/ProductCardModal';
 import BasketButton from './components/BasketButton/BasketButton';
 import BasketModal from './components/BasketModal/BasketModal';
 import FilterSize from './components/FilterSize/FilterSize';
+import SortProducts from './components/SortProducts/SortProducts';
 
 const Market = () => {
   const [products, setProducts] = useState([
@@ -85,6 +86,7 @@ const Market = () => {
 
   return ( <div className='market'>
     <h1 className='title'>Магазин товаров</h1>
+    <SortProducts setProd = {setProducts}/>
     <FilterSize filter={filterProducts} />
     <div className='cards-list'>
       {products.map((product, index) => <ProductCard
@@ -102,7 +104,8 @@ const Market = () => {
     <BasketButton num={productsInBasket.reduce((acc,prod) => acc + prod.qtyInBasket, 0)} setIsShow={setBasketModalIsShow} isShow={basketModalIsShow}/>
     {basketModalIsShow && <BasketModal
      prodInBasket={productsInBasket}
-     setProdInBasket={setProductsInBasket}/>}
+     setProdInBasket={setProductsInBasket}
+     isShow={basketModalIsShow}/>}
   </div> );
 }
  

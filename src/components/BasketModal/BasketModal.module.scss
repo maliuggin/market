@@ -7,6 +7,14 @@
   width: 400px;
   background-color: black;
   color: white;
+  overflow-y: scroll;
+}
+
+.scroll {
+  ::-webkit-scrollbar {
+    width: 6px;
+    background-color: black;
+  }
 }
 
 .title {
